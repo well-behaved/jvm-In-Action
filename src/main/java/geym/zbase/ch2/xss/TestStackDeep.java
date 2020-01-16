@@ -1,7 +1,7 @@
 package geym.zbase.ch2.xss;
 
 /**
- * -Xss1m
+ * -Xss256k
  * @author Administrator
  *
  */

@@ -11,7 +11,7 @@ import java.util.HashMap;
  *
  */
 public class PermTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		int i = 0;
 		try {
 			for (i = 0; i < 100000; i++) {
@@ -21,5 +21,6 @@ public class PermTest {
 			System.out.println("total create count:" + i);
 			throw e;
 		}
+		Thread.sleep(40000);
 	}
 }
