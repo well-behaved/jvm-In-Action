@@ -21,12 +21,14 @@ public class DeadLock extends Thread{
 		if (myDirect == south) {
 			try {
 				north.lockInterruptibly();
+				System.out.println(this.getName()+"获取锁north");
 				try {
 					Thread.sleep(500);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				south.lockInterruptibly();
+				System.out.println(this.getName()+"获取锁south");
 				System.out.println("car to south has passed");
 			} catch (InterruptedException e1) {
 				System.out.println("car to south is killed");
@@ -41,12 +43,14 @@ public class DeadLock extends Thread{
 		if (myDirect == north) {
 			try {
 				south.lockInterruptibly();
+				System.out.println(this.getName()+"获取锁south");
 				try {
 					Thread.sleep(500);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				north.lockInterruptibly();
+				System.out.println(this.getName()+"获取锁north");
 				System.out.println("car to north has passed");
 			} catch (InterruptedException e1) {
 				System.out.println("car to north is killed");

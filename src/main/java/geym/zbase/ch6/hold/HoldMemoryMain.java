@@ -20,11 +20,12 @@ public class HoldMemoryMain {
 		public void run() {
 			try{
 				while(true){
+					System.out.println("----");
 					map.put(System.nanoTime(), new byte[512]);
 					Thread.sleep(1);
 				}
 			}catch(Exception e){
-				
+				e.printStackTrace();
 			}
 		}
 	}

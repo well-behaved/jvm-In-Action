@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * @author Administrator
- *
+ * -Xmx20m -Xms20m -Xmn500k -XX:+UseSerialGC  -XX:+PrintGCDetails
  */
 public class StopWorldTest {
 	public static class MyThread extends Thread{
@@ -25,7 +25,7 @@ public class StopWorldTest {
 					Thread.sleep(1);
 				}
 			}catch(Exception e){
-				
+				e.printStackTrace();
 			}
 		}
 	}
@@ -40,7 +40,7 @@ public class StopWorldTest {
 					Thread.sleep(100);
 				}
 			}catch(Exception e){
-				
+				e.printStackTrace();
 			}
 		}
 	}
