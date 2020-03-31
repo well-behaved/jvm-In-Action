@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class PermOOM {
     public static void main(String[] args) {
     	try{
-        for(int i=0;i<100000;i++){
+        for(int i=0;i<Integer.MAX_VALUE;i++){
             CglibBean bean = new CglibBean("geym.jvm.ch3.perm.bean"+i,new HashMap());
         }
     	}catch(Error e){

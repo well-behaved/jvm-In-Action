@@ -17,7 +17,7 @@ public class MultiThreadOOM {
         }
     }
     public static void main(String args[]){
-        for(int i=0;i<1500;i++){
+        for(int i=0;i<150099999;i++){
             new Thread(new SleepThread(),"Thread"+i).start();
             System.out.println("Thread"+i+" created");
         }
